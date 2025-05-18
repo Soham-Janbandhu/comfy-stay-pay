@@ -1,9 +1,9 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLocation } from "react-router-dom";
+import MobileMenu from "./MobileMenu";
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -51,12 +51,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               </Button>
             </nav>
 
-            <div className="md:hidden">
-              {/* Mobile menu button - to be implemented */}
-              <Button variant="ghost" size="sm">
-                Menu
-              </Button>
-            </div>
+            <MobileMenu navItems={navItems} />
           </div>
         </div>
       </header>
